@@ -6,9 +6,7 @@ resource "aws_ecr_repository" "this" {
     scan_on_push = false
   }
 
-  tags = {
-    Name = var.name
-  }
+  tags = merge(var.tags, map("Name", var.name))
 }
 
 resource "aws_ecr_lifecycle_policy" "lifecycle_policy" {

@@ -30,3 +30,9 @@ variable "readonly_arns" {
   description = "ARNs with R/O access"
   default = []
 }
+
+variable "tags" {
+  type = map
+  description = "Tags"
+  default = {}
+}
