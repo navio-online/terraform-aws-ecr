@@ -9,6 +9,12 @@ variable "image_tag_mutability" {
   default = "MUTABLE"
 }
 
+variable "scan_on_push" {
+  type = bool
+  description = "Does image scan needed?"
+  default = false
+}
+
 variable "lifecycle_rules" {
   type = list(string)
   description = "Lifecycle rules list"
